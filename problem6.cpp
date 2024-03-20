@@ -10,8 +10,8 @@ int main(){
     cin >> x >> y;
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
-            if(arr[i] == x && arr[j] == y){
-                if(abs(j-i) < d) d = abs(j-i);
+            if(i != j) {
+                if (arr[i] == x && arr[j] == y) d = min(d, abs(j - i));
             }
         }
     }
